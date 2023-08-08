@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 
 export const Container = styled.header`
   height: 70px;
@@ -29,7 +28,7 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const SavedImgBtn = styled(Link)`
+export const SavedImgBtn = styled.a`
   width: 120px;
   height: 50px;
   color: white;
@@ -39,4 +38,5 @@ export const SavedImgBtn = styled(Link)`
   text-decoration: none;
   border: 3px solid white;
   border-radius: 10px;
+  cursor: pointer;
 `;

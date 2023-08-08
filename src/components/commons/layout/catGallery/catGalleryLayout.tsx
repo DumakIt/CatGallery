@@ -7,6 +7,7 @@ import * as S from "./catGalleryLayoutStyles";
 import { doc, getFirestore, setDoc } from "firebase/firestore/lite";
 import { firebaseApp } from "../../../../commons/libraries/firebase";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function CatGalleryLayout(): JSX.Element {
   const router = useRouter();
@@ -46,7 +47,9 @@ export default function CatGalleryLayout(): JSX.Element {
           <img src="/images/logo.svg" />
         </S.LogoWrapper>
         {router.asPath === "/" && (
-          <S.SavedImgBtn href={"/saveGallery"}>저장한 이미지</S.SavedImgBtn>
+          <Link href={"/saveGallery"}>
+            <S.SavedImgBtn>저장한 이미지</S.SavedImgBtn>
+          </Link>
         )}
       </div>
     </S.Container>
